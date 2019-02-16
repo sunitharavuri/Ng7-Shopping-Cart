@@ -1,0 +1,18 @@
+<div class="container">
+    <app-shopping-filter  class ="filter" (filterByPrice)="filterByPrice($event)"></app-shopping-filter>
+</div>
+
+<div class="container">
+<div class="flex">
+  <section *ngFor="let product of products">
+    <img src="../../../assets/images/{{product.photo}}" alt="image" width="50" />
+    <h2>{{product.name}}</h2>
+    <aside>
+      <ul>
+        <li>Price: {{product.price}}</li>
+      </ul>
+      <button [routerLink]="['/cart', { id:product.id }]">Add to Cart</button>
+    </aside>
+  </section>
+</div>
+</div>

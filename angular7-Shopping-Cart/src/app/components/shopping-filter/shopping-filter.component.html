@@ -1,0 +1,10 @@
+<div>
+  <div class="filters-orderBy">
+      <div class ="sort">Sort By :</div>
+      <select class="input-control" (change)="filterByPrice.emit($event)">
+          <option value="None">Featured items</option>
+          <option value="Max_to_Min">Max to Min</option>
+          <option value="Min_to_Max">Min to Max</option>
+      </select>
+  </div>
+</div>
